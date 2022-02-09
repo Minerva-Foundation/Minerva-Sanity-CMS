@@ -7,6 +7,19 @@ export default {
       name: 'name',
       title: 'Name',
       type: 'string',
+      validation: Rule => Rule.required()
+    },
+    {
+      name: 'type',
+      type: 'string',
+      options: {
+        list: [
+          {title: "Merchant", value:'merchant'},
+          {title: "Independent", value: "independent"},
+          {title: "Minerva Member", value: "minerva"},
+        ]
+      },
+      validation: Rule => Rule.required()
     },
     {
       name: 'slug',
@@ -16,6 +29,7 @@ export default {
         source: 'name',
         maxLength: 96,
       },
+      validation: Rule => Rule.required()
     },
     {
       name: 'image',

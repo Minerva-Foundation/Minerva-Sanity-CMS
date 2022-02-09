@@ -29,6 +29,7 @@ export default {
       name: 'title',
       title: 'Title',
       type: 'string',
+      validation: Rule => Rule.required()
     },
     {
       name: 'slug',
@@ -38,12 +39,14 @@ export default {
         source: 'title',
         maxLength: 96,
       },
+      validation: Rule => Rule.required()
     },
     {
       name: 'author',
       title: 'Author',
       type: 'reference',
       to: {type: 'author'},
+      validation: Rule => Rule.required()
     },
     {
       name: 'mainImage',
@@ -58,6 +61,7 @@ export default {
       title: 'Categories',
       type: 'array',
       of: [{type: 'reference', to: {type: 'category'}}],
+      validation: Rule => Rule.required()
     },
     {
       name: 'publishedAt',
@@ -68,6 +72,7 @@ export default {
       name: 'body',
       title: 'Body',
       type: 'blockContent',
+      validation: Rule => Rule.required()
     },
   ],
 
