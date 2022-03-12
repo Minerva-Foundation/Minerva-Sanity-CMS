@@ -69,6 +69,12 @@ export default {
       type: 'datetime',
     },
     {
+      name: 'hint',
+      title: 'Hint or first few sentences (ending with "...")',
+      type: 'text',
+      validation: Rule => Rule.max(230)
+    },
+    {
       name: 'body',
       title: 'Body',
       type: 'blockContent',
