@@ -29,7 +29,7 @@ export default {
       name: 'title',
       title: 'Title',
       type: 'string',
-      validation: Rule => Rule.required()
+      validation: Rule => Rule.required().max(64)
     },
     {
       name: 'slug',
@@ -55,6 +55,7 @@ export default {
       options: {
         hotspot: true,
       },
+      validation: Rule => Rule.required()
     },
     {
       name: 'categories',
@@ -67,12 +68,13 @@ export default {
       name: 'publishedAt',
       title: 'Published at',
       type: 'datetime',
+      validation: Rule => Rule.required()
     },
     {
-      name: 'hint',
-      title: 'Hint or first few sentences (ending with "...")',
+      name: 'abstract',
+      title: 'Short Abstract, engaging audience',
       type: 'text',
-      validation: Rule => Rule.max(230)
+      validation: Rule => Rule.max(500)
     },
     {
       name: 'body',

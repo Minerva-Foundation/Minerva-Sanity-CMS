@@ -26,5 +26,24 @@
       "name": "part:@sanity/base/schema",
       "path": "./schemas/schema"
     }
+  ],
+  "__experimental_spaces": [
+    {
+      "name": "production",
+      "title": "Production",
+      "default": true,
+      "api": {
+        "projectId": "kyk4jks2",
+        "dataset": "production"
+      }
+    },
+    {
+      "name": "staging",
+      "title": "Staging",
+      "api": {
+        "projectId": "kyk4jks2",
+        "dataset": "staging"
+      }
+    }
   ]
 }
